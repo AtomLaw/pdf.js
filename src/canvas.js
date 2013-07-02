@@ -1715,6 +1715,7 @@ var CanvasGraphics = (function CanvasGraphicsClosure() {
       var heightScale = Math.max(Math.sqrt(c * c + d * d), 1);
 
       var imgToPaint;
+      // instanceof HTMLElement does not work in jsdom node.js module
       if (imgData instanceof HTMLElement || !imgData.data) {
         imgToPaint = imgData;
       } else {
